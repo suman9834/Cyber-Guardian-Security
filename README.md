@@ -273,29 +273,25 @@ These routes are implemented in the Flask backend.
 
 ## 📸 Screenshots
 
-Add your project screenshots here:
-
-```md
 ### 🏠 Dashboard
 
 ![Cyber Guardian Dashboard](./screenshots/dashboard.png)
 
 ### 🔐 Password Check
 
-![Password Health](./screenshots/password.png)
+![Password Health](./screenshots/tools.png)
 
 ### 🔗 Link Scanner
 
-![Link Scanner](./screenshots/link-scanner.png)
+![Link Scanner](./screenshots/about.png)
 
 ### 📧 Email Check
 
-![Email Check](./screenshots/email-check.png)
+![Email Check](./screenshots/contact.png)
 
 ### 📱 Phone Information
 
-![Phone Information](./screenshots/phone-info.png)
-```
+![Phone Information](./screenshots/terms.png)
 
 Recommended folder:
 
