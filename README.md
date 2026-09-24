@@ -302,10 +302,10 @@ Recommended folder:
 ```text
 screenshots/
 ├── dashboard.png
-├── password.png
-├── link-scanner.png
-├── email-check.png
-└── phone-info.png
+├── tools.png
+├── contact.png
+├── about.png
+└── terms.png
 ```
 
 ---
