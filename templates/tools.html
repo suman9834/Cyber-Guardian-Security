@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools | Cyber Guardian</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">CG</span> Cyber Guardian</a
+      >
+      <div class="nav-links">
+        <a href="/">Dashboard</a><a class="active" href="/tools">Tools</a
+        ><a href="/about">About</a><a href="/contact">Contact</a>
+      </div>
+      <a class="icon-button" href="/" aria-label="Back to dashboard">←</a>
+    </nav>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">SECURITY TOOLKIT</p>
+          <h1>Simple checks.<br /><em>Better habits.</em></h1>
+          <p class="hero-copy">
+            Use the dashboard to analyze passwords, links and email addresses.
+            Each tool is designed for quick first-pass awareness, not as a
+            replacement for professional security software.
+          </p>
+        </div>
+      </section>
+      <section class="lower-grid">
+        <article class="panel">
+          <p class="eyebrow">WHAT IS COVERED</p>
+          <h2>Three everyday risks</h2>
+          <div class="history-list">
+            <div class="history-item">
+              <span class="history-type">01</span
+              ><span class="history-value"
+                >Password length and character variety</span
+              ><strong class="safe">READY</strong>
+            </div>
+            <div class="history-item">
+              <span class="history-type">02</span
+              ><span class="history-value"
+                >Suspicious words and insecure links</span
+              ><strong class="safe">READY</strong>
+            </div>
+            <div class="history-item">
+              <span class="history-type">03</span
+              ><span class="history-value"
+                >Invalid addresses and scam signals</span
+              ><strong class="safe">READY</strong>
+            </div>
+          </div>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">PRIVACY FIRST</p>
+          <h2>Your browser, your history</h2>
+          <p class="muted">
+            Scan history is stored only in your browser's local storage.
+            Password values are never added to history, and the server does not
+            keep scan records.
+          </p>
+          <a
+            class="primary"
+            href="/"
+            style="
+              display: inline-block;
+              padding: 13px 16px;
+              text-decoration: none;
+            "
+            >Open dashboard</a
+          >
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>Cyber Guardian</span><span>Educational security checks</span>
+    </footer>
+  </body>
+</html>

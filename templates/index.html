@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Guardian | Security Workspace</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">CG</span> Cyber Guardian</a
+      >
+      <div class="nav-links">
+        <a class="active" href="/">Dashboard</a><a href="/tools">Tools</a
+        ><a href="/about">About</a><a href="/contact">Contact</a>
+      </div>
+      <button class="icon-button" id="themeToggle" aria-label="Toggle theme">
+        ☼
+      </button>
+    </nav>
+
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">PERSONAL SECURITY CONSOLE</p>
+          <h1>Make every click<br /><em>count.</em></h1>
+          <p class="hero-copy">
+            Fast, practical checks for passwords, links and suspicious messages.
+            Your scans stay in this browser.
+          </p>
+        </div>
+        <div class="hero-status">
+          <span class="status-dot"></span><span>Protection active</span
+          ><strong id="scanCount">0 scans today</strong>
+        </div>
+      </section>
+
+      <section class="tool-grid">
+        <article class="tool-card password-card">
+          <div class="card-heading">
+            <span class="tool-icon">⌁</span>
+            <div>
+              <p class="card-kicker">01 / IDENTITY</p>
+              <h2>Password health</h2>
+            </div>
+          </div>
+          <p class="muted">
+            Test strength without sending your password anywhere.
+          </p>
+          <div class="input-row">
+            <input
+              type="password"
+              id="password"
+              placeholder="Type a password"
+              autocomplete="off" /><button class="primary" id="passwordButton">
+              Analyze
+            </button>
+          </div>
+          <div class="meter"><span id="passwordMeter"></span></div>
+          <div class="result-line">
+            <strong id="result1">Waiting for input</strong
+            ><span id="passwordScore">0 / 100</span>
+          </div>
+          <p class="tip" id="passwordTip">
+            Aim for 10+ characters, numbers, uppercase and symbols.
+          </p>
+        </article>
+        <article class="tool-card">
+          <div class="card-heading">
+            <span class="tool-icon">↗</span>
+            <div>
+              <p class="card-kicker">02 / WEB</p>
+              <h2>Link scanner</h2>
+            </div>
+          </div>
+          <p class="muted">
+            Spot risky domains and missing HTTPS before you open them.
+          </p>
+          <div class="input-row">
+            <input
+              type="url"
+              id="url"
+              placeholder="https://example.com" /><button
+              class="primary"
+              id="urlButton">
+              Scan
+            </button>
+          </div>
+          <div class="result-line">
+            <strong id="result2">Waiting for input</strong
+            ><span id="urlScore">--</span>
+          </div>
+          <p class="tip" id="urlTip">
+            Always inspect the domain, even when a link looks familiar.
+          </p>
+        </article>
+        <article class="tool-card">
+          <div class="card-heading">
+            <span class="tool-icon">@</span>
+            <div>
+              <p class="card-kicker">03 / MESSAGES</p>
+              <h2>Email check</h2>
+            </div>
+          </div>
+          <p class="muted">
+            Check an address for common scam signals and urgency bait.
+          </p>
+          <div class="input-row">
+            <input
+              type="email"
+              id="email"
+              placeholder="sender@example.com" /><button
+              class="primary"
+              id="emailButton">
+              Check
+            </button>
+          </div>
+          <div class="result-line">
+            <strong id="result3">Waiting for input</strong
+            ><span id="emailScore">--</span>
+          </div>
+          <p class="tip" id="emailTip">
+            A known-looking name does not guarantee a genuine sender.
+          </p>
+        </article>
+        <article class="tool-card">
+          <div class="card-heading">
+            <span class="tool-icon">#</span>
+            <div>
+              <p class="card-kicker">04 / METADATA</p>
+              <h2>Number info</h2>
+            </div>
+          </div>
+          <p class="muted">
+            Check country, region and line type without identifying the owner.
+          </p>
+          <div class="input-row">
+            <input type="tel" id="phone" placeholder="+91 9876543210" /><button
+              class="primary"
+              id="phoneButton">
+              Inspect
+            </button>
+          </div>
+          <div class="result-line">
+            <strong id="result4">Waiting for input</strong
+            ><span id="phoneScore">--</span>
+          </div>
+          <p class="tip" id="phoneTip">
+            Use international format. No name, address or personal profile is
+            revealed.
+          </p>
+          <p class="phone-meta" id="phoneMeta"></p>
+        </article>
+      </section>
+
+      <section class="lower-grid">
+        <article class="panel history-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">LOCAL ACTIVITY</p>
+              <h2>Recent checks</h2>
+            </div>
+            <button class="text-button" id="clearHistory">Clear all</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <p class="empty-state">Your recent checks will appear here.</p>
+          </div>
+        </article>
+        <article class="panel assistant-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">QUICK ADVICE</p>
+              <h2>Security assistant</h2>
+            </div>
+            <span class="ai-badge">AI</span>
+          </div>
+          <div class="chat-bubble" id="chatResult">
+            Ask me about passwords, phishing, links or OTPs.
+          </div>
+          <div class="chat-row">
+            <input
+              id="chatInput"
+              placeholder="Ask a security question" /><button
+              class="primary"
+              id="chatButton">
+              Ask
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>Cyber Guardian</span
+      ><span>Educational security checks · No data stored on server</span>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

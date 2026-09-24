@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms | Cyber Guardian</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">CG</span> Cyber Guardian</a
+      >
+      <div class="nav-links">
+        <a href="/">Dashboard</a><a href="/tools">Tools</a
+        ><a href="/about">About</a><a href="/contact">Contact</a
+        ><a class="active" href="/terms">Terms</a>
+      </div>
+      <a class="icon-button" href="/" aria-label="Back to dashboard">←</a>
+    </nav>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">IMPORTANT INFORMATION</p>
+          <h1>Terms &<br /><em>boundaries.</em></h1>
+          <p class="hero-copy">
+            A clear guide to using Cyber Guardian responsibly.
+          </p>
+        </div>
+      </section>
+      <section class="lower-grid">
+        <article class="panel">
+          <p class="eyebrow">01 / PURPOSE</p>
+          <h2>Educational security checks</h2>
+          <p class="muted">
+            Cyber Guardian provides basic awareness checks for passwords, links
+            and email addresses. Results are indicators, not guarantees, and
+            should not replace professional security tools or advice.
+          </p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">02 / YOUR RESPONSIBILITY</p>
+          <h2>Think before you trust</h2>
+          <p class="muted">
+            You are responsible for verifying websites, messages and accounts
+            before sharing information. Never enter a real password into a tool
+            unless you fully trust how it handles that data.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>Cyber Guardian</span><span>Educational security checks</span>
+    </footer>
+  </body>
+</html>

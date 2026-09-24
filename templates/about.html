@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Cyber Guardian</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">CG</span> Cyber Guardian</a
+      >
+      <div class="nav-links">
+        <a href="/">Dashboard</a><a href="/tools">Tools</a
+        ><a class="active" href="/about">About</a><a href="/contact">Contact</a
+        ><a href="/terms">Terms</a>
+      </div>
+      <a class="icon-button" href="/" aria-label="Back to dashboard">←</a>
+    </nav>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ABOUT THE PROJECT</p>
+          <h1>Security that<br /><em>feels simple.</em></h1>
+          <p class="hero-copy">
+            Cyber Guardian turns everyday online safety checks into a quick,
+            understandable workflow.
+          </p>
+        </div>
+      </section>
+      <section class="lower-grid">
+        <article class="panel">
+          <p class="eyebrow">THE IDEA</p>
+          <h2>Awareness before action</h2>
+          <p class="muted">
+            Phishing, weak passwords and scam messages often look ordinary. This
+            project helps you pause, inspect the warning signs and make a more
+            informed decision.
+          </p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">DESIGN PRINCIPLE</p>
+          <h2>Private by default</h2>
+          <p class="muted">
+            Scan history stays in your browser. The dashboard is designed for
+            quick checks without building a profile of your activity.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>Cyber Guardian</span><span>Educational security checks</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Cyber Guardian</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">CG</span> Cyber Guardian</a
+      >
+      <div class="nav-links">
+        <a href="/">Dashboard</a><a href="/tools">Tools</a
+        ><a href="/about">About</a><a class="active" href="/contact">Contact</a
+        ><a href="/terms">Terms</a>
+      </div>
+      <a class="icon-button" href="/" aria-label="Back to dashboard">←</a>
+    </nav>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h1>Have a thought?<br /><em>Send it over.</em></h1>
+          <p class="hero-copy">
+            Questions, suggestions or a bug report are welcome.
+          </p>
+        </div>
+      </section>
+      <section class="lower-grid">
+        <article class="panel">
+          <p class="eyebrow">MESSAGE FORM</p>
+          <h2>Write to us</h2>
+          <form class="contact-form">
+            <input type="text" placeholder="Your name" required /><input
+              type="email"
+              placeholder="Your email"
+              required /><textarea
+              placeholder="How can we improve Cyber Guardian?"
+              rows="5"
+              required></textarea
+            ><button class="primary" type="submit">Send message</button>
+          </form>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">BEFORE YOU WRITE</p>
+          <h2>Keep it useful</h2>
+          <p class="muted">
+            Please do not include passwords, OTPs, payment details or other
+            private information in your message.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>Cyber Guardian</span><span>Educational security checks</span>
+    </footer>
+    <script>
+      document
+        .querySelector(".contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          this.querySelector("button").textContent = "Message noted";
+        });
+    </script>
+  </body>
+</html>
